@@ -149,10 +149,8 @@ class ls_colors(ColorScheme):
                 if key == 'executable' and (context.directory or context.link):
                     continue
                 t_attributes = t_attributes.split(';')
-                colour256_fg = self.get_256_foreground_color_if_exists(
-                    t_attributes)
-                colour256_bg = self.get_256_background_color_if_exists(
-                    t_attributes)
+                colour256_fg = self.get_256_foreground_color_if_exists(t_attributes)
+                colour256_bg = self.get_256_background_color_if_exists(t_attributes)
                 new_attr = self.get_attr_from_lscolors(t_attributes)
                 attr |= new_attr
 
